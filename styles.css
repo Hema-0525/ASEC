@@ -1,0 +1,148 @@
+/* Basic styles for the body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a23; /* Dark Navy Blue background */
+    color: #ffffff; /* White text */
+    position: relative; /* To allow pseudo-element positioning */
+}
+
+/* Create a blurred background image using a pseudo-element */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("Image.jpg");
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-size: cover; /* Ensures the image covers the whole website */
+    background-position: center center; /* Centers the image */
+    z-index: -1; /* Places the image behind all other content */
+    filter: blur(8px);
+}
+
+/* Styling for the header */
+header {
+    background-color: #001f3f; /* Dark Blue */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Ensure header stays above the background */
+    z-index: 1;
+}
+
+/* Logo in the header */
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #00aaff; /* Light Blue */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00aaff; /* Light Blue on hover */
+}
+
+/* Hero section for the homepage */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    /* background-color: #002b5c; Medium Dark Blue */
+    background-color: rgba(0, 31, 63, 0.8); /* Optional: Add a background color with some transparency */
+    position: relative; /* Ensure hero section stays above the background */
+    z-index: 1;
+    border: 2px solid #002b5c; /* Light Blue border */
+    border-radius: 15px; /* This adds the curved corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visual separation */
+
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin: 0;
+    color: #00aaff; /* Light Blue */
+}
+
+.hero p {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Section styling */
+section {
+    padding: 60px 20px;
+    position: relative; /* Ensure sections stay above the background */
+    z-index: 1;
+}
+
+/* General content styling */
+.content {
+    max-width: 800px; /* Adjusts the width of the content box */
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px; /* Adds padding inside the content box */
+    background-color: rgba(0, 47, 92, 0.8); /* Slightly transparent dark blue background */
+    border-radius: 15px; /* Adds rounded corners */
+    line-height: 1.6; /* Increases the space between lines for readability */
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border: 2px solid #00aaff; /* Light Blue border */
+}
+
+/* Team member styling */
+.team-member {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid #00aaff; /* Light Blue border */
+}
+
+.team-member h3 {
+    color: #00aaff; /* Light Blue */
+}
+
+/* Footer styling */
+footer {
+    background-color: #001f3f;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    position: relative; /* Ensure footer stays above the background */
+    z-index: 1;
+}
+
+footer p {
+    margin: 5px 0;
+    color: #ffffff; /* White text */
+}
